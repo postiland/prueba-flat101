@@ -1,0 +1,34 @@
+<?php $_collectionPointRecords = $this->getCollection(); ?>
+<?php
+echo $this->getLayout()
+    ->createBlock('Magento\Cms\Block\Block')
+    ->setBlockId('flat101-block')
+    ->toHtml();
+?>
+<?php if($_collectionPointRecords && count($_collectionPointRecords)):
+?>
+<table>
+    <thead>
+        <tr>
+            <th><?php echo __('ID #') ?></th>
+            <th><?php echo __('Name') ?></th>
+            <th><?php echo __('Address') ?></th>
+            <th><?php echo __('Locality') ?></th>
+            <th><?php echo __('Latitude') ?></th>
+            <th><?php echo __('Longitude') ?></th>
+            <th><?php echo __('Shipping Method') ?></th>
+        </tr>
+    </thead>
+	<?php foreach ($_collectionPointRecords as $collectionPoint): ?>
+		<tr>
+			<td><?= $collectionPoint->getData('id'); ?></td>
+            <td><?= $collectionPoint->getData('name'); ?></td>
+            <td><?= $collectionPoint->getData('address'); ?></td>
+            <td><?= $collectionPoint->getData('locality'); ?></td>
+            <td><?= $collectionPoint->getData('latitude'); ?></td>
+            <td><?= $collectionPoint->getData('longitude'); ?></td>
+            <td><?= $collectionPoint->getData('shipping_method'); ?></td>
+		</tr>
+	<?php endforeach; ?>
+<?php endif; ?>
+</table>

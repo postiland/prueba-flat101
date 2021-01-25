@@ -1,0 +1,6 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Flat101_CollectionPoint::collectionpoint" title="Flat101" module="Flat101_CollectionPoint" sortOrder="1" resource="Flat101_CollectionPoint::collectionpoint"/>
+        <add id="Flat101_CollectionPoint::manage_items" title="Collection Points" module="Flat101_CollectionPoint" sortOrder="1" parent="Flat101_CollectionPoint::collectionpoint" action="collectionpoint/index/" resource="Flat101_CollectionPoint::collectionpoint"/>
+    </menu>
+</config>
